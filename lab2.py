@@ -359,6 +359,7 @@ class MyLayout(Widget):
 
 
 # Calculator app class
+
 class CalculatorApp(App):
     def build(self):
         return MyLayout()
