@@ -1,0 +1,200 @@
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        TextInput:
+            id: calc_input
+            text : ""
+            halign : "right"
+            font_size: 65
+            size_hint: (1, .20)
+
+
+        GridLayout:
+            cols: 5
+            rows: 6
+
+            #row1
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "Sine"
+                on_press: root.function("sin ")
+            Button:
+                id: clear
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "C"
+                on_press: root.clear()
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "("
+                on_press: root.math_sign("( ")
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: ")"
+                on_press: root.math_sign(" )")
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: u"\u00AB"
+                on_press: root.remove()
+
+            #row2
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "Cos"
+                on_press: root.function("cos ")
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "^"
+                on_press: root.math_sign(" ^ ")
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "none"
+               # on_press: root.math_sign("{ ")
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "none"
+                #on_press: root.math_sign(" }")
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "/"
+                on_press: root.math_sign(" / ")
+
+            #row3
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "Tan"
+                on_press: root.function("tan ")
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "7"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(7)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                background_color: (157/255,157/255,157/255,1 )
+                text: "8"
+                on_press: root.button_press(8)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "9"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(9)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "*"
+                on_press: root.math_sign(" * ")
+
+
+            #row4
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "Cot"
+                on_press: root.function("cot ")
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "4"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(4)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "5"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(5)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "6"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(6)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 60
+                text: "-"
+                on_press: root.math_sign(" - ")
+
+            #row5
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "ln"
+                on_press: root.function("ln ")
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "1"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(1)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "2"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(2)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "3"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(3)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+"
+                on_press: root.math_sign(" + ")
+
+            #row6
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "log(10)"
+                on_press: root.function("log ")
+
+            Button:
+                size_hint: (.2,.2)
+                font_size: 32
+                text: "Unary(-)"
+                on_press: root.math_sign("-")
+                background_color: (157/255,157/255,157/255,1 )
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "0"
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.button_press(0)
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "."
+                background_color: (157/255,157/255,157/255,1 )
+                on_press: root.dot()
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "="
+                background_color: ("#99cfe0" )
+                on_press: root.equal()
